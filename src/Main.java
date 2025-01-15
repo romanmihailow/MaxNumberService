@@ -1,12 +1,25 @@
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        System.out.printf("Hello and welcome!");
+        Scanner in = new Scanner(System.in);
+        System.out.print("Введите число A: ");
+        int a = in.nextInt();
+        System.out.print("Введите число B: ");
+        int b = in.nextInt();
 
-        for (int i = 1; i <= 5; i++) {
+        CalcService service = new CalcService();
+        int myMax = service.max(a, b);
 
-            System.out.println("i = " + i);
-        }
+//        int a = 50;
+//        int b = 6;
+//        int result;
+//        if (a > b) {
+//          result = a;
+//        } else {
+//          result = b;
+//        }
+        System.out.println("MAX " + myMax);
     }
 }
